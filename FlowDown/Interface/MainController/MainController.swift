@@ -144,6 +144,13 @@ class MainController: UIViewController {
         sidebarLayoutView.contentView.addSubview(sidebar)
         contentView.contentView.addSubview(chatView)
 
+        #if !targetEnvironment(macCatalyst)
+            let edgePanGesture = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(handleEdgePan(_:)))
+            edgePanGesture.edges = .left
+            edgePanGesture.delegate = self
+            view.addGestureRecognizer(edgePanGesture)
+        #endif
+
         setupViews()
     }
 
@@ -412,6 +419,19 @@ class MainController: UIViewController {
 
     @objc func searchConversationsFromMenu(_: Any? = nil) {
         sidebar.searchButton.delegate?.searchButtonDidTap()
+    }
+}
+
+extension MainController: UIGestureRecognizerDelegate {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        gestureRecognizer is UIScreenEdgePanGestureRecognizer
+    }
+
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        if let edgePan = gestureRecognizer as? UIScreenEdgePanGestureRecognizer {
+            return isSidebarCollapsed && edgePan.edges == .left
+        }
+        return true
     }
 }
 
