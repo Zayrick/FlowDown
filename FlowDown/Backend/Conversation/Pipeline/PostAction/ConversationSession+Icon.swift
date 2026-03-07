@@ -39,7 +39,7 @@ private struct IconConversationXML: Codable {
 
 @available(iOS 26.0, macCatalyst 26.0, *)
 @Generable(description: "A single emoji character that best represents the conversation. ")
-struct ConversationIcon: Sendable, Equatable {
+struct ConversationIcon: Equatable {
     @Guide(description: "Only respond with one emoji character. Example: 🔖")
     var icon: String
 }

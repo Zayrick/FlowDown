@@ -13,7 +13,6 @@ import Foundation
 @testable import Storage
 import Testing
 
-@Suite("Import/Export round-trip")
 struct ImportExportRoundTripSuite {
     private func ensureEnvironment() throws {
         if AppEnvironment.isBootstrapped {
@@ -48,8 +47,8 @@ struct ImportExportRoundTripSuite {
         }
     }
 
-    @Test("Cloud model .fdmodel export/import round-trip persists data")
-    func cloudModel_fdmodelExportImport_roundTripPersistsData() async throws {
+    @Test
+    func `Cloud model .fdmodel export/import round-trip persists data`() async throws {
         try ensureEnvironment()
         await resetRelevantData()
 
@@ -116,8 +115,8 @@ struct ImportExportRoundTripSuite {
         #expect(imported.response_format == original.response_format)
     }
 
-    @Test("MCP server .fdmcp export/import round-trip persists data")
-    func mcpServer_fdmcpExportImport_roundTripPersistsData() async throws {
+    @Test
+    func `MCP server .fdmcp export/import round-trip persists data`() async throws {
         try ensureEnvironment()
         await resetRelevantData()
 
@@ -158,8 +157,8 @@ struct ImportExportRoundTripSuite {
         #expect(imported.comment == original.comment)
     }
 
-    @Test("Chat template .fdtemplate export/import round-trip persists data")
-    func chatTemplate_fdtemplateExportImport_roundTripPersistsData() async throws {
+    @Test
+    func `Chat template .fdtemplate export/import round-trip persists data`() async throws {
         try ensureEnvironment()
         await resetRelevantData()
 

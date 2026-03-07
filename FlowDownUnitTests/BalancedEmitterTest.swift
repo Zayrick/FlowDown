@@ -19,10 +19,9 @@ private actor ChunkRecorder {
     }
 }
 
-@Suite
 class BalancedEmitterTestSuite {
-    @Test("BalancedEmitter batches using size decided at add time")
-    func balancedEmitter_batchesUsingAddTimeBatchSize() async throws {
+    @Test
+    func `BalancedEmitter batches using size decided at add time`() async throws {
         let recorder = ChunkRecorder()
         let emitter = BalancedEmitter(duration: 0.001, frequency: 2) { chunk in
             Task {

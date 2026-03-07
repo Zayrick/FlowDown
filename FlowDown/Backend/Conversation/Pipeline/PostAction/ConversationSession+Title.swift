@@ -39,7 +39,7 @@ private struct ConversationXML: Codable {
 
 @available(iOS 26.0, macCatalyst 26.0, *)
 @Generable(description: "A concise, 3-5 word title summarizing a conversation.")
-struct ConversationTitle: Sendable, Equatable {
+struct ConversationTitle: Equatable {
     @Guide(description: "A plain, concise, 3-5 word title with no prefix, label or markdown.")
     var title: String
 }

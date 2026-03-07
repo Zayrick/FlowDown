@@ -126,10 +126,10 @@ class ModelToolsManager {
         }
     }
 
-    struct ToolResultContents: Equatable, Hashable, Codable, Sendable {
+    struct ToolResultContents: Equatable, Hashable, Codable {
         let text: String
 
-        struct Attachment: Equatable, Hashable, Codable, Sendable {
+        struct Attachment: Equatable, Hashable, Codable {
             let name: String
             let data: Data
             let mimeType: String?

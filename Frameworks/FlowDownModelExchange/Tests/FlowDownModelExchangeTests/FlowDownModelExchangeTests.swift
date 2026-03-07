@@ -2,7 +2,7 @@
 import Foundation
 import Testing
 
-@Test func publicKeyRoundTrip() throws {
+@Test func `public key round trip`() throws {
     let keyPair = ModelExchangeKeyPair()
     let encoded = keyPair.encodedPublicKey
     #expect(ModelExchangePublicKey(encoded: encoded) != nil)
@@ -11,7 +11,7 @@ import Testing
     #expect(restored.agreement == keyPair.publicKey.agreement)
 }
 
-@Test func signedRequestVerifies() throws {
+@Test func `signed request verifies`() throws {
     let keyPair = ModelExchangeKeyPair()
     let builder = ModelExchangeRequestBuilder(callbackScheme: "thirdparty", keyPair: keyPair)
     let request = try builder.makeExchangeURL(
@@ -33,7 +33,7 @@ import Testing
     #expect(try ModelExchangeAPI.verify(path: path, signature: #require(signature), publicKey: #require(pub)))
 }
 
-@Test func encryptDecryptRoundTrip() throws {
+@Test func `encrypt decrypt round trip`() throws {
     let requester = ModelExchangeKeyPair()
     let peer = requester.publicKey
     let plain = Data("super-secret-model".utf8)

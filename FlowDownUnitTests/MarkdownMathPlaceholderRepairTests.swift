@@ -2,10 +2,9 @@
 import MarkdownParser
 import Testing
 
-@Suite
 final class MarkdownMathPlaceholderRepairTests {
-    @Test("Repair keeps math placeholders from leaking inside strong text")
-    func repairStrongInlineMathPlaceholder() {
+    @Test
+    func `Repair keeps math placeholders from leaking inside strong text`() {
         let markdown = "**Conclusion: for points outside a uniform thin spherical shell, gravity is equivalent to placing total shell mass \\\\(M_s\\\\) at the center.**"
         let result = MarkdownParser().parse(markdown)
 
@@ -16,8 +15,8 @@ final class MarkdownMathPlaceholderRepairTests {
         #expect(containsMathNode(in: repaired))
     }
 
-    @Test("Repair handles nested inline containers")
-    func repairNestedInlineMathPlaceholder() {
+    @Test
+    func `Repair handles nested inline containers`() {
         let markdown = "_See **\\(a^2+b^2=c^2\\)** for the proof._"
         let result = MarkdownParser().parse(markdown)
 

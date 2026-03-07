@@ -10,10 +10,9 @@ import Foundation
 import Testing
 import WCDBSwift
 
-@Suite("Template migrations")
 struct TemplateMigrationTests {
-    @Test("V4 -> V5 creates ChatTemplate table and bumps userVersion")
-    func migrateV4ToV5_createsTable() throws {
+    @Test
+    func `V4 -> V5 creates ChatTemplate table and bumps userVersion`() throws {
         let tempDirectory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString, isDirectory: true)
         try FileManager.default.createDirectory(at: tempDirectory, withIntermediateDirectories: true)
         defer { try? FileManager.default.removeItem(at: tempDirectory) }

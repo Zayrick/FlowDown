@@ -2,10 +2,9 @@ import Foundation
 @testable import Logger
 import Testing
 
-@Suite("LogStore")
 struct LogStoreTests {
-    @Test("append writes formatted line and readTail returns it")
-    func append_writesLine() throws {
+    @Test
+    func `append writes formatted line and readTail returns it`() throws {
         let (store, directory) = try makeStore()
         defer { try? FileManager.default.removeItem(at: directory) }
 
@@ -18,8 +17,8 @@ struct LogStoreTests {
         #expect(text.contains("hello world"))
     }
 
-    @Test("readTail limits output to requested byte count")
-    func readTail_limitsBytes() throws {
+    @Test
+    func `readTail limits output to requested byte count`() throws {
         let (store, directory) = try makeStore()
         defer { try? FileManager.default.removeItem(at: directory) }
 
@@ -35,8 +34,8 @@ struct LogStoreTests {
         #expect(tail.count <= 200) // guard against unexpectedly large tails
     }
 
-    @Test("log files rotate once max size is reached")
-    func rotate_rotatesFiles() throws {
+    @Test
+    func `log files rotate once max size is reached`() throws {
         let (store, directory) = try makeStore(maxFileSize: 128, maxFiles: 2)
         defer { try? FileManager.default.removeItem(at: directory) }
         let manager = FileManager.default
@@ -52,8 +51,8 @@ struct LogStoreTests {
         #expect(!manager.fileExists(atPath: store.rotatedFileURL(index: 3).path))
     }
 
-    @Test("rotate keeps newest content in base file after rolling over")
-    func rotate_keepsNewestInBase() throws {
+    @Test
+    func `rotate keeps newest content in base file after rolling over`() throws {
         let (store, directory) = try makeStore(maxFileSize: 96, maxFiles: 2)
         defer { try? FileManager.default.removeItem(at: directory) }
 
@@ -68,8 +67,8 @@ struct LogStoreTests {
         #expect(tail.contains("latest-entry"))
     }
 
-    @Test("clear removes files even after rotation happened")
-    func clear_afterRotation_removesAllFiles() throws {
+    @Test
+    func `clear removes files even after rotation happened`() throws {
         let (store, directory) = try makeStore(maxFileSize: 96, maxFiles: 2)
         defer { try? FileManager.default.removeItem(at: directory) }
 
@@ -84,8 +83,8 @@ struct LogStoreTests {
         #expect(contents.isEmpty)
     }
 
-    @Test("readTail returns empty string when file does not exist")
-    func readTail_whenFileMissing_returnsEmpty() throws {
+    @Test
+    func `readTail returns empty string when file does not exist`() throws {
         let (store, directory) = try makeStore()
         defer { try? FileManager.default.removeItem(at: directory) }
 
@@ -94,8 +93,8 @@ struct LogStoreTests {
         #expect(tail.isEmpty)
     }
 
-    @Test("clear removes base and rotated log files")
-    func clear_removesAllFiles() throws {
+    @Test
+    func `clear removes base and rotated log files`() throws {
         let (store, directory) = try makeStore(maxFileSize: 128, maxFiles: 2)
         defer { try? FileManager.default.removeItem(at: directory) }
 
@@ -109,8 +108,8 @@ struct LogStoreTests {
         #expect(contents.isEmpty)
     }
 
-    @Test("category resolver infers sensible defaults")
-    func resolver_infersCategory() {
+    @Test
+    func `category resolver infers sensible defaults`() {
         #expect(LogCategoryResolver.resolve(category: nil, fileID: "/tmp/ModelInference.swift") == "Model")
         #expect(LogCategoryResolver.resolve(category: nil, fileID: "/tmp/NetworkService.swift") == "Network")
         #expect(LogCategoryResolver.resolve(category: nil, fileID: "/tmp/UserInterfaceView.swift") == "UI")

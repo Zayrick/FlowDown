@@ -181,7 +181,7 @@ public final class CloudModel: Identifiable, Codable, Equatable, Hashable, Table
 }
 
 public extension CloudModel {
-    enum ResponseFormat: String, CaseIterable, Codable, Sendable {
+    enum ResponseFormat: String, CaseIterable, Codable {
         case chatCompletions
         case responses
 
