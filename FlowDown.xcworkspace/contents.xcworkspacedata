@@ -23,6 +23,9 @@
       location = "group:Frameworks/FlowDownModelExchange">
    </FileRef>
    <FileRef
+      location = "group:Frameworks/mlx-swift-lm">
+   </FileRef>
+   <FileRef
       location = "group:FlowDownUnitTests.xctestplan">
    </FileRef>
 </Workspace>
