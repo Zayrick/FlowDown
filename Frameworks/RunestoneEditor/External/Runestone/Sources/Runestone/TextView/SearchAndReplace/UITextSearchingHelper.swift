@@ -108,8 +108,12 @@ extension UITextSearchingHelper: UITextSearching {
         performTextSearch(for: queryString, options: options) { searchResults in
             let replacements = searchResults.map { BatchReplaceSet.Replacement(range: $0.range, text: replacementText) }
             let batchReplaceSet = BatchReplaceSet(replacements: replacements)
-            DispatchQueue.main.async {
+            if Thread.isMainThread {
                 self._textView.replaceText(in: batchReplaceSet)
+            } else {
+                DispatchQueue.main.sync {
+                    self._textView.replaceText(in: batchReplaceSet)
+                }
             }
         }
     }
@@ -168,8 +172,8 @@ private extension UITextSearchingHelper {
     }
 }
 
+@available(iOS 16, macCatalyst 16, *)
 extension UITextSearchingHelper: UIFindInteractionDelegate {
-    @available(iOS 16, *)
     func findInteraction(_: UIFindInteraction, sessionFor _: UIView) -> UIFindSession? {
         UITextSearchingFindSession(searchableObject: self)
     }
