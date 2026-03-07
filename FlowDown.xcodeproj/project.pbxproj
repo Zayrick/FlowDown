@@ -1150,7 +1150,7 @@
 			repositoryURL = "https://github.com/ktiays/GlyphixTextFx/";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.2.1;
+				minimumVersion = 2.3.6;
 			};
 		};
 		502272D02EB3DE3200AF9D28 /* XCRemoteSwiftPackageReference "UIEffectKit" */ = {
@@ -1158,7 +1158,7 @@
 			repositoryURL = "https://github.com/Lakr233/UIEffectKit";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.0;
+				minimumVersion = 0.1.1;
 			};
 		};
 		502BCBCE2D43DADD00500180 /* XCRemoteSwiftPackageReference "ConfigurableKit" */ = {
@@ -1206,7 +1206,7 @@
 			repositoryURL = "https://github.com/Lakr233/ColorfulX";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.1;
+				minimumVersion = 6.0.2;
 			};
 		};
 		50A350B92DE4B5C3008F094E /* XCRemoteSwiftPackageReference "MarkdownView" */ = {
@@ -1222,7 +1222,7 @@
 			repositoryURL = "https://github.com/apple/swift-collections.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.3.0;
+				minimumVersion = 1.4.0;
 			};
 		};
 		50B492922D4F602C00F4D2B3 /* XCRemoteSwiftPackageReference "ZIPFoundation" */ = {
@@ -1230,7 +1230,7 @@
 			repositoryURL = "https://github.com/weichsel/ZIPFoundation";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.9.19;
+				minimumVersion = 0.9.20;
 			};
 		};
 		50B514762D23157A0092284C /* XCRemoteSwiftPackageReference "SnapKit" */ = {
@@ -1246,7 +1246,7 @@
 			repositoryURL = "https://github.com/SwifterSwift/SwifterSwift.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 7.0.0;
+				minimumVersion = 8.0.0;
 			};
 		};
 		50CB4E732DE30A57009C58E1 /* XCRemoteSwiftPackageReference "Digger" */ = {
@@ -1278,7 +1278,7 @@
 			repositoryURL = "https://github.com/CoreOffice/XMLCoder";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.17.1;
+				minimumVersion = 0.18.0;
 			};
 		};
 		86B4FDBE2E1190AD00C6DC8F /* XCRemoteSwiftPackageReference "swift-sdk" */ = {
@@ -1286,7 +1286,7 @@
 			repositoryURL = "https://github.com/modelcontextprotocol/swift-sdk";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.9.0;
+				minimumVersion = 0.11.0;
 			};
 		};
 		EDF9A13C2D67788A001D183C /* XCRemoteSwiftPackageReference "Respring" */ = {
