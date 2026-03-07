@@ -14,6 +14,7 @@ jobs:
     runs-on: macos-26
     env:
       VERSION: ${{ github.ref_name }}
+      XCODE_VERSION: "26.3"
     steps:
       - name: Validate ref
         id: tag_check

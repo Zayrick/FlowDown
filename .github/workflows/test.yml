@@ -26,6 +26,8 @@ jobs:
     if: ${{ !startsWith(github.head_ref, 'housekeeping/') }}
     name: Unit Tests
     runs-on: macos-26
+    env:
+      XCODE_VERSION: "26.3"
     permissions:
       contents: read
     steps:

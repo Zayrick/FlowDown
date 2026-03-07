@@ -69,6 +69,8 @@ def select_newest(candidates):
 
 
 def main() -> int:
+    import os
+
     bundles = discover_xcodes()
     if not bundles:
         print("[-] no Xcode installations found under /Applications", file=sys.stderr)
@@ -78,6 +80,19 @@ def main() -> int:
     if not candidates:
         print("[-] no Xcode installations with readable versions found", file=sys.stderr)
         return 1
+
+    xcode_version = os.environ.get("XCODE_VERSION", "").strip()
+    if xcode_version:
+        filtered = [c for c in candidates if c["version"].startswith(xcode_version)]
+        if not filtered:
+            print(
+                f"[-] no Xcode matching version prefix '{xcode_version}' "
+                f"(available: {', '.join(c['version'] for c in candidates)})",
+                file=sys.stderr,
+            )
+            return 1
+        log(f"filtering to Xcode versions matching '{xcode_version}' ({len(filtered)} found)")
+        candidates = filtered
 
     newest = select_newest(candidates)
     if not newest:
