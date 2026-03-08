@@ -41,8 +41,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Lakr233/ColorfulX",
       "state" : {
-        "revision" : "2f008fcffc7f23811b2ba70eda77c57223815bc3",
-        "version" : "6.0.2"
+        "revision" : "bdf19698a9fdd3d2cd3ade4a9434d443b4313b36",
+        "version" : "6.1.0"
       }
     },
     {
@@ -122,8 +122,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Lakr233/ListViewKit",
       "state" : {
-        "revision" : "5dea05a52a6c2c7bb013a5925c517d6e32940605",
-        "version" : "1.1.8"
+        "revision" : "07f7adfa0629f8647991e3c148b7d3e060fe2917",
+        "version" : "1.2.0"
       }
     },
     {
@@ -131,8 +131,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Lakr233/Litext",
       "state" : {
-        "revision" : "c7e83f2f580ce34a102ca9ba9d2bb24e507dccd9",
-        "version" : "0.5.6"
+        "revision" : "3cbe3ffa94f6a2cf7fa7cf91e4f2aeac437d3a1f",
+        "version" : "1.1.0"
       }
     },
     {
@@ -149,8 +149,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Lakr233/MarkdownView",
       "state" : {
-        "revision" : "007e032fa8fe1cd1a7b81b359914d520c427dffa",
-        "version" : "3.6.3"
+        "revision" : "b33f699a388939fc543c935b870675b91ecbc9f6",
+        "version" : "3.7.0"
       }
     },
     {

@@ -1183,7 +1183,7 @@
 			repositoryURL = "https://github.com/Lakr233/ColorfulX";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.2;
+				minimumVersion = 6.1.0;
 			};
 		};
 		50A350B92DE4B5C3008F094E /* XCRemoteSwiftPackageReference "MarkdownView" */ = {
@@ -1191,7 +1191,7 @@
 			repositoryURL = "https://github.com/Lakr233/MarkdownView";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 3.6.3;
+				minimumVersion = 3.7.0;
 			};
 		};
 		50AE757C2EF436FC00D2C845 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
@@ -1239,7 +1239,7 @@
 			repositoryURL = "https://github.com/Lakr233/ListViewKit";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.8;
+				minimumVersion = 1.2.0;
 			};
 		};
 		50E3FA072D6D7F6A000405BD /* XCRemoteSwiftPackageReference "GPTEncoder" */ = {

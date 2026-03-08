@@ -1,114 +1,6 @@
 {
   "pins" : [
     {
-      "identity" : "alertcontroller",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Lakr233/AlertController",
-      "state" : {
-        "revision" : "32257175ef8eacafca83ae84f19423e83a434fa6",
-        "version" : "2.1.0"
-      }
-    },
-    {
-      "identity" : "alignedcollectionviewflowlayout",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/mischa-hildebrand/AlignedCollectionViewFlowLayout",
-      "state" : {
-        "revision" : "236094ac389234d528cc782c140bcb20724b86bf",
-        "version" : "1.1.3"
-      }
-    },
-    {
-      "identity" : "bettercodable",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/marksands/BetterCodable",
-      "state" : {
-        "revision" : "61153170668db7a46a20a87e35e70f80b24d4eb5",
-        "version" : "0.4.0"
-      }
-    },
-    {
-      "identity" : "choreographer",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/unixzii/Choreographer",
-      "state" : {
-        "revision" : "fa8cf25b0a16c499b299d357c1a64db6760a83ef",
-        "version" : "0.1.0"
-      }
-    },
-    {
-      "identity" : "colorfulx",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Lakr233/ColorfulX",
-      "state" : {
-        "revision" : "2f008fcffc7f23811b2ba70eda77c57223815bc3",
-        "version" : "6.0.2"
-      }
-    },
-    {
-      "identity" : "colorvector",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Lakr233/ColorVector.git",
-      "state" : {
-        "revision" : "6da8726bf38d68eb943d0f2139ac2a1fac70e65b",
-        "version" : "1.0.4"
-      }
-    },
-    {
-      "identity" : "configurablekit",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Lakr233/ConfigurableKit",
-      "state" : {
-        "revision" : "65faa3328dcda472f9f3e4e2ec43807217f2b488",
-        "version" : "3.1.2"
-      }
-    },
-    {
-      "identity" : "digger",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Lakr233/Digger",
-      "state" : {
-        "revision" : "265c84aa4a447564628d2788e63efc3ab7779d7e",
-        "version" : "0.0.5"
-      }
-    },
-    {
-      "identity" : "dpkgversion",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Lakr233/DpkgVersion",
-      "state" : {
-        "revision" : "64f192ac8c74f334e5b610c3da9aa9b456502ced",
-        "version" : "1.0.4"
-      }
-    },
-    {
-      "identity" : "eventsource",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/mattt/eventsource.git",
-      "state" : {
-        "revision" : "a3a85a85214caf642abaa96ae664e4c772a59f6e",
-        "version" : "1.4.1"
-      }
-    },
-    {
-      "identity" : "glyphixtextfx",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/ktiays/GlyphixTextFx/",
-      "state" : {
-        "revision" : "e1d0aa71c1849363a1bbef061d3d92f10481e62c",
-        "version" : "2.3.6"
-      }
-    },
-    {
-      "identity" : "gptencoder",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/alfianlosari/GPTEncoder",
-      "state" : {
-        "revision" : "a86968867ab4380e36b904a14c42215f71efe8b4",
-        "version" : "1.0.4"
-      }
-    },
-    {
       "identity" : "highlightr",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/raspu/Highlightr",
@@ -118,21 +10,12 @@
       }
     },
     {
-      "identity" : "listviewkit",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Lakr233/ListViewKit",
-      "state" : {
-        "revision" : "5dea05a52a6c2c7bb013a5925c517d6e32940605",
-        "version" : "1.1.8"
-      }
-    },
-    {
       "identity" : "litext",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Lakr233/Litext",
       "state" : {
-        "revision" : "c7e83f2f580ce34a102ca9ba9d2bb24e507dccd9",
-        "version" : "0.5.6"
+        "revision" : "3cbe3ffa94f6a2cf7fa7cf91e4f2aeac437d3a1f",
+        "version" : "1.1.0"
       }
     },
     {
@@ -149,107 +32,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Lakr233/MarkdownView",
       "state" : {
-        "revision" : "007e032fa8fe1cd1a7b81b359914d520c427dffa",
-        "version" : "3.6.3"
-      }
-    },
-    {
-      "identity" : "mlx-swift",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/ml-explore/mlx-swift",
-      "state" : {
-        "revision" : "6ba4827fb82c97d012eec9ab4b2de21f85c3b33d",
-        "version" : "0.30.6"
-      }
-    },
-    {
-      "identity" : "mlx-swift-lm",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/ml-explore/mlx-swift-lm/",
-      "state" : {
-        "revision" : "7e19e09027923d89ac47dd087d9627f610e5a91a",
-        "version" : "2.30.6"
-      }
-    },
-    {
-      "identity" : "msdisplaylink",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Lakr233/MSDisplayLink",
-      "state" : {
-        "revision" : "ebf5823cb5fc1326639d9a05bc06d16bbe82989f",
-        "version" : "2.0.8"
-      }
-    },
-    {
-      "identity" : "respring",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/ktiays/Respring",
-      "state" : {
-        "revision" : "5efa8274a25dc44e418b3695f9fcfea9ef771087",
-        "version" : "1.0.0"
-      }
-    },
-    {
-      "identity" : "scrubberkit",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Lakr233/ScrubberKit",
-      "state" : {
-        "revision" : "a2c801853e2772c76a17210a4d8fb4f6b55af5e1",
-        "version" : "0.1.1"
-      }
-    },
-    {
-      "identity" : "snapkit",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/SnapKit/SnapKit.git",
-      "state" : {
-        "revision" : "2842e6e84e82eb9a8dac0100ca90d9444b0307f4",
-        "version" : "5.7.1"
-      }
-    },
-    {
-      "identity" : "spindicator",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/ivanvorobei/SPIndicator",
-      "state" : {
-        "revision" : "e8a045f91757b32bb29c6feff1644ef79c8daedf",
-        "version" : "1.6.5"
-      }
-    },
-    {
-      "identity" : "springinterpolation",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Lakr233/SpringInterpolation",
-      "state" : {
-        "revision" : "cdb556516daa9b43c16aae9436dd39e19ff930fd",
-        "version" : "1.4.0"
-      }
-    },
-    {
-      "identity" : "swift-asn1",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apple/swift-asn1.git",
-      "state" : {
-        "revision" : "810496cf121e525d660cd0ea89a758740476b85f",
-        "version" : "1.5.1"
-      }
-    },
-    {
-      "identity" : "swift-async-algorithms",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apple/swift-async-algorithms.git",
-      "state" : {
-        "revision" : "9d349bcc328ac3c31ce40e746b5882742a0d1272",
-        "version" : "1.1.3"
-      }
-    },
-    {
-      "identity" : "swift-atomics",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apple/swift-atomics.git",
-      "state" : {
-        "revision" : "b601256eab081c0f92f059e12818ac1d4f178ff7",
-        "version" : "1.3.0"
+        "revision" : "b33f699a388939fc543c935b870675b91ecbc9f6",
+        "version" : "3.7.0"
       }
     },
     {
@@ -271,87 +55,6 @@
       }
     },
     {
-      "identity" : "swift-crypto",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apple/swift-crypto.git",
-      "state" : {
-        "revision" : "6f70fa9eab24c1fd982af18c281c4525d05e3095",
-        "version" : "4.2.0"
-      }
-    },
-    {
-      "identity" : "swift-jinja",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/huggingface/swift-jinja.git",
-      "state" : {
-        "revision" : "f731f03bf746481d4fda07f817c3774390c4d5b9",
-        "version" : "2.3.2"
-      }
-    },
-    {
-      "identity" : "swift-log",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apple/swift-log.git",
-      "state" : {
-        "revision" : "bbd81b6725ae874c69e9b8c8804d462356b55523",
-        "version" : "1.10.1"
-      }
-    },
-    {
-      "identity" : "swift-nio",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apple/swift-nio.git",
-      "state" : {
-        "revision" : "e932d3c4d8f77433c8f7093b5ebcbf91463948a0",
-        "version" : "2.95.0"
-      }
-    },
-    {
-      "identity" : "swift-numerics",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apple/swift-numerics",
-      "state" : {
-        "revision" : "0c0290ff6b24942dadb83a929ffaaa1481df04a2",
-        "version" : "1.1.1"
-      }
-    },
-    {
-      "identity" : "swift-sdk",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/modelcontextprotocol/swift-sdk",
-      "state" : {
-        "revision" : "6112a3995a992d159ad0e82c2d62a008ce932666",
-        "version" : "0.11.0"
-      }
-    },
-    {
-      "identity" : "swift-system",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apple/swift-system.git",
-      "state" : {
-        "revision" : "7c6ad0fc39d0763e0b699210e4124afd5041c5df",
-        "version" : "1.6.4"
-      }
-    },
-    {
-      "identity" : "swift-transformers",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/huggingface/swift-transformers",
-      "state" : {
-        "revision" : "150169bfba0889c229a2ce7494cf8949f18e6906",
-        "version" : "1.1.9"
-      }
-    },
-    {
-      "identity" : "swifterswift",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/SwifterSwift/SwifterSwift.git",
-      "state" : {
-        "revision" : "5d948a15446bddb6c367bc7e7100cfcbaa0e9b57",
-        "version" : "8.0.0"
-      }
-    },
-    {
       "identity" : "swiftmath",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/mgriebling/SwiftMath",
@@ -361,57 +64,12 @@
       }
     },
     {
-      "identity" : "swiftsoup",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/scinfu/SwiftSoup",
-      "state" : {
-        "revision" : "dba183c96b2da4e4b80bb31b1e2e59cb9542b8fc",
-        "version" : "2.13.0"
-      }
-    },
-    {
-      "identity" : "uieffectkit",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Lakr233/UIEffectKit",
-      "state" : {
-        "revision" : "4cd6d822a75af123a73787c09e604352b5790aec",
-        "version" : "0.1.1"
-      }
-    },
-    {
       "identity" : "wcdb-spm-prebuilt",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Lakr233/wcdb-spm-prebuilt",
       "state" : {
         "revision" : "9077e295997fd8cc1e0c0f669a40b2314af20a1a",
         "version" : "2.1.15"
-      }
-    },
-    {
-      "identity" : "with",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/ktiays/With",
-      "state" : {
-        "revision" : "a45e2f39e82322eb663a256941c06edd520a82e1",
-        "version" : "2.1.1"
-      }
-    },
-    {
-      "identity" : "xmlcoder",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/CoreOffice/XMLCoder",
-      "state" : {
-        "revision" : "5e1ada828d2618ecb79c974e03f79c8f4df90b71",
-        "version" : "0.18.0"
-      }
-    },
-    {
-      "identity" : "yyjson",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/ibireme/yyjson.git",
-      "state" : {
-        "revision" : "8b4a38dc994a110abaec8a400615567bd996105f",
-        "version" : "0.12.0"
       }
     },
     {

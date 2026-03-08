@@ -33,12 +33,29 @@ extension MessageListView {
             return updateCache(for: message, theme: theme, contentHash: contentHash)
         }
 
+        private func renderOnMain(
+            result: MarkdownParser.ParseResult,
+            theme: MarkdownTheme
+        ) -> (RenderedTextContent.Map, [Int: CodeHighlighter.HighlightMap]) {
+            let work = { @MainActor in
+                let rendered: RenderedTextContent.Map = result.render(theme: theme)
+                let highlights: [Int: CodeHighlighter.HighlightMap] = result.render(theme: theme)
+                return (rendered, highlights)
+            }
+            if Thread.isMainThread {
+                return MainActor.assumeIsolated { work() }
+            } else {
+                return DispatchQueue.main.sync {
+                    MainActor.assumeIsolated { work() }
+                }
+            }
+        }
+
         private func updateCache(for message: MessageRepresentation, theme: MarkdownTheme, contentHash: Int) -> MarkdownTextView.PreprocessedContent {
             let content = message.content
             let result = MarkdownParser().parse(content)
             let blocks = result.documentByRepairingInlineMathPlaceholders()
-            let rendered: RenderedTextContent.Map = result.render(theme: theme)
-            let highlightMaps: [Int: CodeHighlighter.HighlightMap] = result.render(theme: theme)
+            let (rendered, highlightMaps) = renderOnMain(result: result, theme: theme)
             let package = MarkdownTextView.PreprocessedContent(
                 blocks: blocks,
                 rendered: rendered,

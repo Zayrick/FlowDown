@@ -45,9 +45,11 @@ extension MarkdownTheme {
         },
     )
 
+    @MainActor
     static func subscribeToConfigurableItem() {
         assert(cancellables.isEmpty)
         ConfigurableKit.publisher(forKey: storageKey, type: String.self)
+            .receive(on: RunLoop.main)
             .sink { input in
                 guard let input,
                       let scale = MarkdownTheme.FontScale(rawValue: input)
