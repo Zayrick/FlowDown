@@ -35,6 +35,15 @@ extension ConversationSession {
         )
         defer { self.stopThinking(for: message.objectId) }
 
+        let isImmediateFollowUpAfterToolCall: Bool = {
+            guard let lastMessage = requestMessages.last else {
+                return false
+            }
+            if case .tool = lastMessage {
+                return true
+            }
+            return false
+        }()
         var pendingToolCalls: [ToolRequest] = []
         var generatedImages: [ImageContent] = []
         let collapseAfterReasoningComplete = ModelManager.shared.collapseReasoningSectionWhenComplete
@@ -130,7 +139,21 @@ extension ConversationSession {
             message.update(\.document, to: summary)
         }
 
-        if !message.reasoningContent.isEmpty, message.document.isEmpty {
+        let trimmedReasoning = message.reasoningContent.trimmingCharacters(in: .whitespacesAndNewlines)
+        let trimmedDocument = message.document.trimmingCharacters(in: .whitespacesAndNewlines)
+        let shouldSilentlyDropEmptyAssistantMessage = isImmediateFollowUpAfterToolCall
+            && trimmedReasoning.isEmpty
+            && trimmedDocument.isEmpty
+            && generatedImages.isEmpty
+            && pendingToolCalls.isEmpty
+
+        if shouldSilentlyDropEmptyAssistantMessage {
+            discard(messageIdentifier: message.objectId)
+            await requestUpdate(view: currentMessageListView)
+            return false
+        }
+
+        if !trimmedReasoning.isEmpty, trimmedDocument.isEmpty {
             let document = String(localized: "Thinking finished without output any content.")
             message.update(\.document, to: document)
         }
@@ -142,14 +165,11 @@ extension ConversationSession {
                 toolCalls: pendingToolCalls.map {
                     .init(id: $0.id, function: .init(name: $0.name, arguments: $0.args))
                 },
-                reasoning: {
-                    let trimmed = message.reasoningContent.trimmingCharacters(in: .whitespacesAndNewlines)
-                    return trimmed.isEmpty ? nil : trimmed
-                }(),
+                reasoning: trimmedReasoning.isEmpty ? nil : trimmedReasoning,
             ),
         )
 
-        if message.document.isEmpty, message.reasoningContent.isEmpty, generatedImages.isEmpty, !modelWillExecuteTools {
+        if trimmedDocument.isEmpty, trimmedReasoning.isEmpty, generatedImages.isEmpty, pendingToolCalls.isEmpty {
             throw NSError(
                 domain: "Inference Service",
                 code: -1,

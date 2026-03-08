@@ -207,6 +207,15 @@ final class ConversationSession: Identifiable {
         }
     }
 
+    func discard(messageIdentifier: Message.ID) {
+        sdb.deleteSupplementMessage(nextTo: messageIdentifier)
+        sdb.delete(messageIdentifier: messageIdentifier)
+        messages.removeAll { $0.objectId == messageIdentifier }
+        attachments[messageIdentifier] = nil
+        thinkingDurationTimer[messageIdentifier]?.invalidate()
+        thinkingDurationTimer[messageIdentifier] = nil
+    }
+
     /// 删除自这条消息以后的全部数据
     func deleteCurrentAndAfter(messageIdentifier: Message.ID, completion: @escaping () -> Void = {}) {
         cancelCurrentTask { [self] in
