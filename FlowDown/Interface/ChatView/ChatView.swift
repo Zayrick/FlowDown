@@ -30,7 +30,7 @@ class ChatView: UIView {
     #endif
 
     let editor = RichEditorView()
-    let editorBackgroundView: UIVisualEffectView = .adaptive()
+    let editorBackgroundView: UIVisualEffectView = .init(effect: UIBlurEffect(style: .regular))
 
     let sessionManager = ConversationSessionManager.shared
     private var messageListViews: [Conversation.ID: MessageListView] = [:]
