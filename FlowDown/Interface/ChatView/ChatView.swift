@@ -90,7 +90,12 @@ class ChatView: UIView {
         }
 
         editorBackgroundView.snp.makeConstraints { make in
-            make.bottom.left.right.equalToSuperview()
+            make.left.right.equalToSuperview()
+            #if targetEnvironment(macCatalyst)
+                make.bottom.equalToSuperview()
+            #else
+                make.bottom.equalToSuperview().offset(128)
+            #endif
             make.top.equalTo(editor.snp.top).offset(-4) // for visual
         }
 
@@ -391,7 +396,7 @@ extension ChatView {
                     edgeSize: min(54, edgeHeight),
                 )
             #else
-                let usesUnifiedBackdrop: Bool = if #available(iOS 26.0, *) {
+                let usesUnifiedBackdrop = if #available(iOS 26.0, *) {
                     false
                 } else {
                     true
